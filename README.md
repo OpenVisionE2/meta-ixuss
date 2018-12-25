@@ -1,2 +1,2 @@
 # meta-ixuss
-IXUSS BSP layer for PLi's OE
+IXUSS BSP layer for Open Vision
