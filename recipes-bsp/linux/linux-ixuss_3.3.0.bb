@@ -5,7 +5,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
-COMPATIBLE_MACHINE = "(ixussone|ixusszero)"
+COMPATIBLE_MACHINE = "^(ixussone|ixusszero)$"
 
 KERNEL_RELEASE = "3.3.0"
 
