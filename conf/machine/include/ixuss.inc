@@ -70,7 +70,10 @@ IMAGE_CMD_ubi_append = "\
     "
 
 
-MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd ixuss"
+MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd ixuss middleflash"
+
+# Broken bootloader can only flash around 100 MB
+FLASHSIZE = "96"
 
 BOOTLOGO_FILENAME = "cfe-bootlogo.bmp"
 
