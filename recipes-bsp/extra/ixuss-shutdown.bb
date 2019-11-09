@@ -14,3 +14,5 @@ do_install() {
     install -d ${D}${sysconfdir}/init.d/
     install -m 0755 ${WORKDIR}/ixuss-shutdown.sh ${D}${sysconfdir}/init.d/ixuss-shutdown
 }
+
+COMPATIBLE_MACHINE = "^(ixussone|ixusszero)$"
