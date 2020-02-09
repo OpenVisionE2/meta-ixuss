@@ -24,6 +24,7 @@ RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_
 
 SRC_URI += "http://source.mynonpublic.com/stblinux-3.3.0-20130404.tgz \
     file://defconfig \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://fix-proc-cputype.patch \
     file://fixme-hardfloat.patch \
     file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \
