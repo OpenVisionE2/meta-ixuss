@@ -1,5 +1,5 @@
 # We know about rtc
-include conf/machine/include/build-extras.inc
+require conf/machine/include/build-extras.inc
 
 BOX_BRAND = "ixuss"
 
@@ -21,7 +21,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
     "
 
-include conf/machine/include/autoload-filesystems.inc
+require conf/machine/include/autoload-filesystems.inc
 
 SOC_FAMILY = "bcm7413"
 
