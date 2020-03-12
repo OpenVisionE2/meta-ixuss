@@ -35,7 +35,6 @@ GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 PREFERRED_PROVIDER_virtual/kernel = "linux-ixuss"
 
 PREFERRED_VERSION_linux-ixuss = "3.3.0"
-PREFERRED_VERSION_nfs-utils ?= "1.2.8"
 PREFERRED_VERSION_rt8812au = "4.3.14"
 
 KERNEL_IMAGETYPE = "vmlinux"
@@ -68,7 +67,6 @@ IMAGE_CMD_ubi_append = "\
     rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
     rm -rf ${IMAGEDIR}; \
     "
-
 
 MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd ixuss middleflash"
 
