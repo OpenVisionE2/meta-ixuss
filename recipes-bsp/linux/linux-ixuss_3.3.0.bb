@@ -3,7 +3,7 @@ SECTION = "kernel"
 LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 COMPATIBLE_MACHINE = "^(ixussone|ixusszero)$"
 
