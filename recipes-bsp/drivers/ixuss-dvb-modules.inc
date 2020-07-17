@@ -6,6 +6,8 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+KV = "3.3.0"
+
 PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/ixuss-${MACHINETYPE}-drivers-${SRCDATE}.zip"
@@ -16,15 +18,16 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 do_compile() {
 }
+
 do_populate_sysroot() {
 }
 
 do_install() {
-    install -d ${D}/lib/modules/${KV}/extra
+    install -d ${D}${base_libdir}/modules/${KV}/extra
     install -d ${D}/${sysconfdir}/modules-load.d
     echo "dvbdrive" > ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
-    install -m 0755 ${WORKDIR}/dvbdrive.ko ${D}/lib/modules/${KV}/extra
+    install -m 0755 ${WORKDIR}/dvbdrive.ko ${D}${base_libdir}/modules/${KV}/extra
     install -d ${D}${sysconfdir}/rcS.d
 }
 
-FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf /lib/modules/${KV}/extra"
+FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf ${base_libdir}/modules/${KV}/extra"
