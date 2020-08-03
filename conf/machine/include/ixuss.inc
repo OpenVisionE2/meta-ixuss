@@ -17,7 +17,6 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
     "
 
-KERNEL_MODULE_AUTOLOAD += "xfs"
 
 SOC_FAMILY = "bcm7413"
 
