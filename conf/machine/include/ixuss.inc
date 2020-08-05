@@ -45,7 +45,7 @@ IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
 
-IMAGE_CMD_ubi_append = "\
+IMAGE_CMD_ubi_append = " \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ROOTFS_FILE}; \
     gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
