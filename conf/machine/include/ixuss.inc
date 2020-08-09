@@ -1,22 +1,23 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "3.3.0"
+
 BOX_BRAND = "ixuss"
 
 KERNEL_FILE = "kernel.bin"
 ROOTFS_FILE = "rootfs.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    ixuss-dvb-modules-${MACHINE} \
-    ixuss-shutdown \
-    "
+	ixuss-dvb-modules-${MACHINE} \
+	ixuss-shutdown \
+	"
 
 DVBPROVIDER = "kernel"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    "
-
+	gstreamer1.0-plugin-dvbmediasink \
+	"
 
 SOC_FAMILY = "bcm7413"
 
@@ -29,7 +30,7 @@ GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-ixuss"
 
-PREFERRED_VERSION_linux-ixuss = "3.3.0"
+PREFERRED_VERSION_linux-ixuss = "${KERNELVERSION}"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
