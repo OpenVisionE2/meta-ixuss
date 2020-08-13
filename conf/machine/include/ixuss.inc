@@ -69,3 +69,5 @@ BOOTLOGO_FILENAME = "cfe-bootlogo.bmp"
 
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/soc-family.inc
+
+RCNAME = "ixuss"
