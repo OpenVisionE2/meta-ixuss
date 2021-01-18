@@ -11,7 +11,6 @@ ROOTFS_FILE = "rootfs.bin"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	ixuss-dvb-modules-${MACHINE} \
 	ixuss-shutdown \
-	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 DVBPROVIDER = "kernel"
