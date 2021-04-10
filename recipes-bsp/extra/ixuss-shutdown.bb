@@ -10,8 +10,8 @@ INITSCRIPT_PARAMS = "start 31 0 ."
 inherit pkgconfig update-rc.d
 
 do_install() {
-    install -d ${D}${sysconfdir}/init.d/
-    install -m 0755 ${WORKDIR}/ixuss-shutdown.sh ${D}${sysconfdir}/init.d/ixuss-shutdown
+    install -d ${D}${INIT_D_DIR}/
+    install -m 0755 ${WORKDIR}/ixuss-shutdown.sh ${D}${INIT_D_DIR}/ixuss-shutdown
 }
 
 COMPATIBLE_MACHINE = "^(ixussone|ixusszero)$"
