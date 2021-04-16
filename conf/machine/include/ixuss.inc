@@ -13,7 +13,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	ixuss-shutdown \
 	"
 
-DVBPROVIDER = "kernel"
 
 SOC_FAMILY = "bcm7413"
 
